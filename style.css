@@ -1,0 +1,38 @@
+:root {
+  --bg: #0b1020;
+  --card: #1d2747;
+  --ink: #f4f1e8;
+  --muted: #a7afca;
+  --sun: #ffd84a;
+  --line: rgba(255, 255, 255, 0.10);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.7 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Segoe UI", sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+header img { width: 72px; height: 72px; border-radius: 16px; }
+header h1 { margin: 0; font-size: 28px; line-height: 1.2; }
+header p { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+nav.lang { display: flex; gap: 8px; margin: 20px 0 28px; }
+nav.lang a {
+  color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600;
+  padding: 6px 14px; border-radius: 999px; background: var(--line);
+}
+nav.lang a[aria-current="true"] { background: var(--sun); color: var(--bg); }
+h2 { font-size: 21px; margin: 36px 0 8px; }
+h3 { font-size: 17px; margin: 24px 0 4px; }
+p, li { color: var(--ink); }
+ul { padding-left: 1.2em; }
+a { color: var(--sun); }
+.card { background: var(--card); border-radius: 20px; padding: 4px 22px 18px; margin-top: 16px; }
+.muted { color: var(--muted); font-size: 15px; }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+footer a { color: var(--muted); }
+/* 言語は片方だけ出す（スクリプトが動かないときは両方出る） */
+.js section[lang]:not(.shown) { display: none; }
